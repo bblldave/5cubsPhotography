@@ -1,0 +1,23 @@
+.heroImage {
+  background-image: url("../../assets/Images/heroImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+}
+
+.btn-xlg {
+  width: 300px;
+  height: 75px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+ngx-gallery /deep/ .ngx-gallery-thumbnail {
+  filter: grayscale(100%);
+}
+
+ngx-gallery /deep/ .ngx-gallery-arrow {
+  color: #e9b8c2;
+}

@@ -1,0 +1,6 @@
+To add a new Album or images to an Album   
+    * If album doesn not exist, add a folder to /assets/Images/Albums/ for the album
+    * Place images in that folder
+    * Update /assets/menu/albums.json to include your album
+    * Add album json file to /assets/Images/imageData/ for the album
+    * add all image urls to json file

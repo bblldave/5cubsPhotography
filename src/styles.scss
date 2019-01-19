@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+//Variable Overrides
+$primary:       #71C4C6;
+$secondary:     #E9B8C2;
+$body-bg: #71C4C6;
+
+
+ngx-gallery .ngx-gallery-close {
+    color: $secondary;
+  }
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+

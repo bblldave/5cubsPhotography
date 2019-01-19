@@ -1,0 +1,26 @@
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-dark bg-dark pl-5 pr-5">
+        <a class="navbar-brand logoMargin" [routerLink]="['/home']">
+          <img src="../../assets/Images/logo.png" width="125" alt="" />
+        </a>
+        <div class="float-right menuMargin">
+          <div ngbDropdown>
+            <a [routerLink]="" class="btn btn-dark" id="menuDropdown" ngbDropdownToggle>
+              Menu
+            </a>
+            <div
+              class="bg-dark text-light"
+              ngbDropdownMenu
+              aria-labelledby="menuDropdown"
+            >
+              <button  class="dropdown-item text-light bg-dark" [routerLink]="['/home']">Home</button>
+              <button *ngFor="let item of albums" class="dropdown-item text-light bg-dark" [routerLink]="['/album/', item.album]">{{item.album}}</button>
+              <button class="dropdown-item text-dark font-weight-bold bg-secondary">Book Now!</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+
+
