@@ -11,12 +11,21 @@ ngx-gallery /deep/ .ngx-gallery-thumbnail {
       padding-left: 100px;
       padding-right: 100px;
     }
+
+    .title{
+      padding-left: 100px;
+    }
   } 
 
   @media only screen and (max-width: 1200px) {
     .galleryPadding{
       padding-left: 50px;
       padding-right: 50px;
+      
+    }
+
+    .title{
+      padding-left: 50px;
     }
   }
 
@@ -24,5 +33,9 @@ ngx-gallery /deep/ .ngx-gallery-thumbnail {
     .galleryPadding{
       padding-left: 0;
       padding-right: 0;
+    }
+
+    .title{
+      padding-left: 0;
     }
   } 

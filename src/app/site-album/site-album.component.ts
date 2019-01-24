@@ -9,6 +9,7 @@ import { Route, ActivatedRoute } from '@angular/router';
   styleUrls: ['./site-album.component.scss']
 })
 export class SiteAlbumComponent implements OnInit {
+  error: boolean;
   Title: string;
   GalleryRowCount: number;
   GalleryHeight: number;
@@ -22,7 +23,9 @@ export class SiteAlbumComponent implements OnInit {
 
     this.route.params.subscribe(
       params => {
+        this.error = false;
         this.galleryImages = [];
+        this.Title = params['albumName'];
         const Title = params['albumName'];
         this.imgSvc.getImages(Title).subscribe((data) => {
           this.images = data;
@@ -38,6 +41,8 @@ export class SiteAlbumComponent implements OnInit {
             };
             this.galleryImages.push(image);
           }
+        }, error => {
+          this.error = true;
         });
       }
     );

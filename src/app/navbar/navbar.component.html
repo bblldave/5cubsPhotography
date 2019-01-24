@@ -14,8 +14,8 @@
               aria-labelledby="menuDropdown"
             >
               <button  class="dropdown-item text-light bg-dark" [routerLink]="['/home']">Home</button>
-              <button *ngFor="let item of albums" class="dropdown-item text-light bg-dark" [routerLink]="['/album/', item.album]">{{item.album}}</button>
-              <button class="dropdown-item text-dark font-weight-bold bg-secondary">Book Now!</button>
+              <button *ngFor="let item of albums" class="dropdown-item text-light bg-dark" [routerLink]="['/album/', item.album]" routerLinkActive="router-link-active">{{item.album}}</button>
+              <button [routerLink]="['/book']" routerLinkActive="router-link-active"  class="dropdown-item text-dark font-weight-bold bg-secondary">Book Now!</button>
             </div>
           </div>
         </div>

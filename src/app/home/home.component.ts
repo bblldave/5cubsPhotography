@@ -8,13 +8,14 @@ import { ImageService } from '../services/image.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  error: boolean;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
   images: any = {};
   constructor(private imgSvc: ImageService) { }
 
   ngOnInit() {
+    this.error = false;
     this.imgSvc.getImages('HomePage').subscribe((data) => {
       this.images = data;
       console.log(this.images);
@@ -26,6 +27,8 @@ export class HomeComponent implements OnInit {
         };
         this.galleryImages.push(image);
       }
+    }, error => {
+      this.error = true;
     });
 
 

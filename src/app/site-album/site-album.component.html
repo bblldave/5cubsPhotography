@@ -1,11 +1,16 @@
 <section class="bg-primary">
   <div class="container-fluid p-0">
     <div class="container-fluid">
+        <h1 class="text-dark title pt-4">{{Title}} Album</h1>
       <ngx-gallery
+        *ngIf="!error"
         class="galleryPadding"
         [options]="galleryOptions"
         [images]="galleryImages"
       ></ngx-gallery>
+      <div *ngIf="error" class="container">
+        <p><strong>It looks like an error occured when trying to get the images. Please try again later.</strong></p>
+      </div>
     </div>
   </div>
 </section>
